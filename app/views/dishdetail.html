@@ -16,7 +16,7 @@
           </div><!-- end of cols-->
 
           <div class="col-xs-9 col-xs-offset-1">
-            <h4>Customer Comments <small>Sort by</small><input type="text" ng-model="sortValue"></h4>
+            <h4>Customer Comments <small>Sort by</small><input type="text" ng-model="sortValue"/></h4>
               <blockquote ng-repeat="item in dish.comments | orderBy: sortValue">
                 <p>{{item.rating}} Stars</p>
                 <p>{{item.comment}}</p>

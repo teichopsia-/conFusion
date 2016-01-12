@@ -31,11 +31,11 @@ gulp.task('default', ['clean'], function() {
     gulp.start('usemin', 'imagemin','copyfonts');
 });
 
-gulp.task('usemin',['jshint'], function () {
-  return gulp.src('./app/*.html')
+gulp.task('usemin',['clean', 'jshint'], function () {
+  return gulp.src('./app/**/*.html')
       .pipe(usemin({
-        css:[minifycss(),rev()],
-        js: [ngannotate(), uglify(),rev()]
+        css: [minifycss(), rev()],
+        js: [ngannotate(), uglify(), rev()]
       }))
       .pipe(gulp.dest('dist/'));
 });
@@ -78,8 +78,8 @@ gulp.task('browser-sync', ['default'], function () {
       server: {
          baseDir: "dist",
          index: "index.html"
-      },
-      reloadDelay: 1000
+      }//,
+      //reloadDelay: 1000
    });
         // Watch any files in dist/, reload on change
   gulp.watch(['dist/**']).on('change', browserSync.reload);
