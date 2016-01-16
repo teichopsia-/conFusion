@@ -3,7 +3,7 @@
 angular.module('confusionApp', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
-        
+
             // route for the home page
             .state('app', {
                 url:'/',
@@ -21,7 +21,7 @@ angular.module('confusionApp', ['ui.router'])
                 }
 
             })
-        
+
             // route for the aboutus page
             .state('app.aboutus', {
                 url:'aboutus',
@@ -32,14 +32,14 @@ angular.module('confusionApp', ['ui.router'])
                     }
                 }
             })
-        
+
             // route for the contactus page
             .state('app.contactus', {
                 url:'contactus',
                 views: {
                     'content@': {
                         templateUrl : 'views/contactus.html',
-                        controller  : 'ContactController'                  
+                        controller  : 'ContactController'
                     }
                 }
             })
@@ -65,7 +65,7 @@ angular.module('confusionApp', ['ui.router'])
                    }
                 }
             });
-    
+
         $urlRouterProvider.otherwise('/');
     })
 ;
