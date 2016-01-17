@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('confusionApp', ['ui.router'])
+angular.module('confusionApp', ['ui.router', 'ngResource'])
 .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
 
@@ -28,7 +28,7 @@ angular.module('confusionApp', ['ui.router'])
                 views: {
                     'content@': {
                         templateUrl : 'views/aboutus.html',
-                        controller  : 'AboutController'                  
+                        controller  : 'AboutController'
                     }
                 }
             })
